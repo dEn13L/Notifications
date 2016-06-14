@@ -11,9 +11,23 @@
     tools:context="com.den13l.notifications.MainActivity"
     >
 
-  <TextView
+  <Button
+      android:id="@+id/postNotification"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Hello World!"
+      android:layout_centerHorizontal="true"
+      android:onClick="postNotification"
+      android:text="@string/post_notification"
       />
+
+  <Button
+      android:id="@+id/removeNotifications"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/postNotification"
+      android:layout_centerHorizontal="true"
+      android:onClick="removeNotifications"
+      android:text="@string/remove_notifications"
+      />
+
 </RelativeLayout>

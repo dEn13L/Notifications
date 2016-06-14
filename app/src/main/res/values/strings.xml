@@ -1,3 +1,9 @@
 <resources>
   <string name="app_name">Notifications</string>
+  <string name="post_notification">Post Notification</string>
+  <string name="remove_notifications">Remove Notifications</string>
+
+  <string name="activity_main">Main Activity</string>
+  <string name="activity_single_notification">Single Notification Activity</string>
+  <string name="activity_multiple_notifications">Multiple Notifications Activity</string>
 </resources>
