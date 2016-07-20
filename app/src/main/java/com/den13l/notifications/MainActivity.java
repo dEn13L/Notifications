@@ -29,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
     NotificationCompat.Builder builder =
         new NotificationCompat.Builder(this).setSmallIcon(R.drawable.ic_mail_outline_black_24px);
 
-    builder.setAutoCancel(true).setDefaults(NotificationCompat.DEFAULT_ALL);
+    Intent deleteIntent = new Intent(this, NotificationDismissedReceiver.class);
+    PendingIntent deletePendingIntent =
+        PendingIntent.getBroadcast(getApplicationContext(), 0, deleteIntent, 0);
+
+    builder.setAutoCancel(true).setDefaults(NotificationCompat.DEFAULT_ALL).setDeleteIntent(deletePendingIntent);
 
     PendingIntent pendingIntent;
     int notificationNumber = ++notificationsCounter;
